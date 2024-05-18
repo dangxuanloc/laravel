@@ -15,8 +15,8 @@ jobs:
       mysql:
         image: mysql:8.0
         env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: laravel_test
+          MYSQL_ROOT_PASSWORD: jvb@2024
+          MYSQL_DATABASE: demo
         options: >-
           --health-cmd="mysqladmin ping"
           --health-interval=10s
@@ -47,5 +47,5 @@ jobs:
         DB_PORT: 3306
         DB_DATABASE: demo
         DB_USERNAME: root
-        DB_PASSWORD: laravel_test
+        DB_PASSWORD: jvb@2024
       run: php artisan test
