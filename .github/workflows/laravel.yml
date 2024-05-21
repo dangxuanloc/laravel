@@ -49,3 +49,21 @@ jobs:
         DB_USERNAME: root
         DB_PASSWORD: jvb@2024
       run: php artisan test
+      
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup SSH key
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.loc-home }}
+
+    - name: Deploy to EC2
+      run: |
+        ssh -o StrictHostKeyChecking=no ubuntu@ip-172-31-35-82 'cd /var/www/laravel && git pull origin main && composer install && php artisan migrate'
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.loc-home }}
