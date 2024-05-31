@@ -64,11 +64,11 @@
                     <div class="search-icon"> <span class="uil uil-search"></span></div>
                   </form>
                   <ul class="navbar-nav mt-2 mt-lg-1 ms-lg-4 ms-xl-8 ms-2xl-9 gap-lg-x1" data-navbar-nav="data-navbar-nav">
-                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#home" title="home">Home</a></li>
-                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#about" title="about">About</a></li>
-                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#products" title="catalog">Catalog</a></li>
-                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#review" title="reviews">Reviews</a></li>
-                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#support" title="support">Support</a></li>
+                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#home" title="home">home</a></li>
+                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#about" title="about">about</a></li>
+                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#products" title="catalog">catalog</a></li>
+                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#review" title="reviews">reviews</a></li>
+                    <li class="nav-item"> <a class="nav-link nav-bar-item px-0" href="#support" title="support">support</a></li>
                   </ul>
                 </div>
               </div>
