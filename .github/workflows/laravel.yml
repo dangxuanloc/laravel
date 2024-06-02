@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,10 +21,7 @@ jobs:
 
       - name: Build and run Docker containers
         run: docker-compose up -d --build
-
-      - name: Wait for MySQL to be healthy
-        run: docker-compose exec mysql bash -c 'until mysqladmin ping -h"127.0.0.1" --silent; do sleep 1; done'
-
+        
       - name: Run composer install
         run: docker-compose exec app composer install
 
