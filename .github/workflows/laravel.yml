@@ -21,18 +21,18 @@ jobs:
 
       - name: Build and run Docker containers
         run: docker-compose up -d --build
-        
+
       - name: Run composer install
-        run: docker-compose exec app composer install
+        run: docker-compose exec laravel_app_1 composer install
 
       - name: Copy .env.example to .env
-        run: docker-compose exec app cp .env.example .env
+        run: docker-compose exec laravel_app_1 cp .env.example .env
 
       - name: Generate application key
-        run: docker-compose exec app php artisan key:generate
+        run: docker-compose exec laravel_app_1 php artisan key:generate
 
       - name: Run migrations
-        run: docker-compose exec app php artisan migrate
+        run: docker-compose exec laravel_app_1 php artisan migrate
 
       - name: Run tests
-        run: docker-compose exec app php artisan test
+        run: docker-compose exec laravel_app_1 php artisan test
