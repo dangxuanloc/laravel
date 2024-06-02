@@ -60,13 +60,7 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
-
-      - name: Deploy to EC2
-        run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-27-230-216.ap-southeast-2.compute.amazonaws.com 'cd /var/www/laravel && git pull origin main && composer install && php artisan migrate'
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-      
+          
       - name: Build and start Docker containers
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@ec2-3-27-230-216.ap-southeast-2.compute.amazonaws.com 'cd /var/www/laravel && sudo docker-compose up --build -d'
